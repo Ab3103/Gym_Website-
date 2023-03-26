@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    .calc {
+
+        border-radius: 0.5rem;
+        box-shadow: 6px 6px 20px rgb(162, 164, 156);
+        width: 800px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid black;
+        background-color: rgb(98, 95, 95);
+        margin-bottom: 40px;
+    }
+/* .calcBox :hover{
+     transform: translateY(-40px);
+   
+} */
+.bodyCalc{
+    background-image: linear-gradient(90deg, rgb(223, 177, 219) ,rgb(49, 233, 147)
+    );
+}
+
+    .formGrp {
+        padding: 5px;
+        margin: 9px
+    }
+
+    .btnC {
+        margin: 7px;
+        color: white;
+        background-color: royalblue;
+        padding: 5px 10px;
+        border: 2px solid rgb(236, 236, 15);
+        border-radius: 2cm;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    .btnC:hover {
+        box-shadow: 3px 3px 6px rgb(13, 13, 11);
+        background-color: rgb(101, 214, 15);
+    }
+
+    .calc_header {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        text-align: center;
+
+        font-weight: bold;
+        background-color: rgb(127 223 68);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 10px;
+    }
+    
+    #calc1{
+        background-color: aqua;
+    }
+
+    .footerC {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        background-color: rgb(189, 134, 244);
+        padding: 6px;
+    }
+
+    .formGrp label {
+
+        font-size: 1.3rem;
+        color: gold;
+    }
+
+    .formGrp input {
+        width: 500px;
+        padding: 7px;
+        margin: auto;
+        border-radius: 10px;
+
+    }
+
+    /* .hmm{
+        border: 3px solid blueviolet;
+        background-color: rgb(176, 239, 202);
+        margin-bottom: 50px;
+    } */
+    html{
+    scroll-behavior: smooth;
+}
+    .BoX1{
+        border: 4px solid rgb(232, 223, 57);
+        box-shadow: 6px 6px 15px rgb(0, 0, 0);
+        border-radius: 20px;
+        margin: 30px;
+       
+        padding: 20px;
+        background-color: rgb(74, 70, 70);
+        color: white;
+        font-family: sans-serif;
+        align-items: center;
+        text-align: center;
+    }
+    .BoX1 h1{
+        color: chartreuse
+    }
+  #p2{
+      font-size: 20px;
+      color: rgb(109, 228, 251);
+  }
+ .BoX1 a{
+     text-decoration: none;
+ }
+    
+
+</style>
+
+<body  class="bodyCalc">
+    <section class="hmm">
+        <div class="infoCalc">
+            <div class="BoX1">
+                <h1 class="h-1">BMI CALCULATOR</h1>
+                <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator. </p>
+                <p id="p2">BMI=weight/(height*height) </p>
+                <a href="#pahilaC" class="btnC" >Calculate BMI</a>
+            </div>
+        </div>
+
+        <div class="infoCalc">
+            <div class="BoX1">
+                <h1 >BMR CALCULATOR</h1>
+                <p>Basal Metabolic Rate is the number of calories required to keep your body functioning at rest. BMR is also known as your body’s metabolism; therefore, any increase to your metabolic weight, such as exercise, will increase your BMR. To get your BMR, simply input your height, gender, age and weight below. Once you’ve determined your BMR, you can begin to monitor how many calories a day you need to maintain or lose weight. </p>
+                <p id="p2">BMR = 10*weight + 6.25*height - 5*age + 5 </p>
+                <a href="#dusraC" class="btnC" >Calculate BMR</a>
+            </div>
+        </div>
+    </section>
+    <section  id="calcBox">
+    <div class="calc" id="pahilaC" >
+        <div class="calc_header" id="calc1"> BMI CALCULATOR</div>
+        <div class="calc_body">
+            <form action="" onsubmit="return false">
+                <div class="formGrp">
+                    <label>Weight:</label>
+                    <input type="number" name="" placeholder="weight in kg" required id="weight">
+                </div>
+                <div class="formGrp">
+                    <label>Height:</label>
+                    <input type="number" name="" placeholder="height in feet" required id="height">
+                </div>
+                <div class="formGrp">
+                    <label>BMI value:</label>
+                    <input type="number" name="" id="result1">
+                </div>
+                <div>
+                    <button type="submit " class="btnC" onclick="getBMI()">Check BMI</button>
+                </div>
+                <div class="footerC">A healthy BMI ranges between 19 to 25</div>
+            </form>
+        </div>
+    </div>
+</section>
+    <div class="calc" id="dusraC">
+        <div class="calc_header"> BMR CALCULATOR</div>
+        <div class="calc_body">
+            <form action="" onsubmit="return false">
+                <div class="formGrp">
+                    <label>Weight:</label>
+                    <input type="number" name="" placeholder="weight in kg" required id="weight1">
+                </div>
+                <div class="formGrp">
+                    <label>Height:</label>
+                    <input type="number" name="" placeholder="height in feet" required id="height1">
+                </div>
+                <div class="formGrp">
+                    <label>Age:</label>
+                    <input type="number" name="" placeholder="enter age" required id="age">
+                </div>
+                <div class="formGrp">
+                    <label>BMR value:</label>
+                    <input type="number" name="" id="ans">
+                </div>
+                <div>
+                    <button type="submit " class="btnC" onclick="getBMR()">Check BMR</button>
+                </div>
+                <div class="footerC">A healthy BMR ranges between 1000 to 2000</div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function getBMI() {
+            let Weight = document.getElementById('weight').value;
+            let Height = document.getElementById('height').value;
+            Height = Height * 12;
+            Height = Height * 0.025;//ht in metres
+            let result = Weight / Math.pow(Height, 2);
+            result = Math.round(result);
+            document.getElementById('result1').value = result;
+
+        }
+        function getBMR() {
+            let weight3 = document.getElementById('weight1').value;
+            let height3 = document.getElementById('height1').value;
+            let Age = document.getElementById('age').value;
+
+            let x = (10 * weight3 + 6.25 * height3 - 5 * Age + 5);
+            let as = x * 1.4;
+            document.getElementById('ans').value = as;
+        }
+    </script>
+
+</body>
+
+</html>
